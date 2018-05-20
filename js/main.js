@@ -99,7 +99,7 @@ title.textContent = "Hey j'ai changé mon titre en JS";
 const p = document.createElement('p');
 p.textContent = "un super paragraphe JS";
 const container = document.getElementsByClassName('container')[0];
-container.textContent =" JS JS JS";
+container.textContent ="JS forever";
 container.appendChild(p);
 
 const randomColor = () => {
@@ -124,4 +124,31 @@ link.setAttribute('href', 'https://developer.mozilla.org');
 link.style.color = randomColor();
 link.style.textDecoration = "none";
 container.appendChild(link);
+
+const image = document.createElement('img');
+image.setAttribute('src', 'https://images.pexels.com/photos/594969/pexels-photo-594969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+body.appendChild(image);
+
+const changeIMG = () => {
+    image.setAttribute('src', 'https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+}
+image.addEventListener('mouseenter', changeIMG);
+
+const colorChange = () => {
+    title.style.cursor = 'pointer';
+    title.style.color = randomColor();
+}    
+title.addEventListener('click', colorChange);
+
+const bouton = document.getElementById('ok');
+const backColor = () => {
+    body.style.backgroundColor = randomColor();
+}
+bouton.addEventListener('click', backColor);
+
+const formButton = document.getElementById('ok');
+
+formButton.addEventListener('click', () => {
+    alert(document.getElementById('inPut').value);
+});
 
