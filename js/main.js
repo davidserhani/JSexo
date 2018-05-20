@@ -92,14 +92,13 @@ console.log(globale);
 // console.log(locale);
 console.log(globale2);
 
-// const title = document.createElement('h1');
-// title.id = title; 
-// title.textContent = "Hey j'ai changé mon titre en JS";
-// document.body.appendChild(title);
+const title = document.createElement('h1');
+title.id = title; 
+title.textContent = "Hey j'ai changé mon titre en JS";
+document.body.appendChild(title);
 const p = document.createElement('p');
 p.textContent = "un super paragraphe JS";
-const container = document.getElementsByClassName('container');
-
+const container = document.getElementsByClassName('container')[0];
 container.textContent =" JS JS JS";
-
+container.appendChild(p);
 
