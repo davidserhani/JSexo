@@ -95,10 +95,33 @@ console.log(globale2);
 const title = document.createElement('h1');
 title.id = title; 
 title.textContent = "Hey j'ai changé mon titre en JS";
-document.body.appendChild(title);
+
 const p = document.createElement('p');
 p.textContent = "un super paragraphe JS";
 const container = document.getElementsByClassName('container')[0];
 container.textContent =" JS JS JS";
 container.appendChild(p);
+
+const randomColor = () => {
+    let rgb = `rgb(`;
+    let rgbColor = '';
+    for (let i = 0; i < 3; i++) {
+        
+        const piff = Math.round(Math.random() * 255);
+        rgbColor += `${piff},`;        
+    }
+    return rgb += rgbColor.slice(0,-1) + ')';
+}
+randomColor();
+
+const body = document.getElementsByTagName("body")[0];
+document.body.insertBefore(title, body.firstElementChild );
+body.style.backgroundColor = randomColor();
+p.style.height = '21px';
+const link = document.createElement('a');
+link.textContent = "mozilla";
+link.setAttribute('href', 'https://developer.mozilla.org');
+link.style.color = randomColor();
+link.style.textDecoration = "none";
+container.appendChild(link);
 
